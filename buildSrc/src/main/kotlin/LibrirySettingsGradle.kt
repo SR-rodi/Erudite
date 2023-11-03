@@ -1,3 +1,4 @@
+import com.android.build.api.dsl.LibraryExtension
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -27,8 +28,8 @@ class LibrirySettingsGradle:Plugin<Project> {
         }
     }
 
-    private fun Project.android(): BaseAppModuleExtension {
-      return  extensions.getByType(BaseAppModuleExtension::class.java)
+    private fun Project.android(): LibraryExtension {
+      return  extensions.getByType(LibraryExtension::class.java)
     }
 
 }

@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Erudite"
 include(":app")
- 
+include(":uiKit")
