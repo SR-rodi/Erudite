@@ -16,3 +16,5 @@ dependencyResolutionManagement {
 rootProject.name = "Erudite"
 include(":app")
 include(":uiKit")
+include(":navigation")
+include(":feature:auth")

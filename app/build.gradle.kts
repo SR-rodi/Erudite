@@ -49,9 +49,12 @@ android {
 }
 
 dependencies {
+    connect(EruditeProjects.UiKit)
+    connect(EruditeProjects.Navigation)
+    connect(EruditeProjects.FeatureAuth)
 
-    implementation(project(":uiKit"))
 
     core()
     compose()
+    navigation()
 }

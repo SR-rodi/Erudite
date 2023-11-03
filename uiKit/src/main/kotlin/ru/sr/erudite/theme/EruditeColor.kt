@@ -1,4 +1,4 @@
-package theme
+package ru.sr.erudite.theme
 
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color

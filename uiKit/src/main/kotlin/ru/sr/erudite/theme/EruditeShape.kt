@@ -1,4 +1,4 @@
-package theme
+package ru.sr.erudite.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.staticCompositionLocalOf
