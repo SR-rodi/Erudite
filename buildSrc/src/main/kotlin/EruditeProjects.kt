@@ -11,4 +11,7 @@ interface EruditeProjects {
     object Navigation:EruditeProjects{
         override val name: String = ":navigation"
     }
+    object Storage:EruditeProjects{
+        override val name: String = ":storage"
+    }
 }

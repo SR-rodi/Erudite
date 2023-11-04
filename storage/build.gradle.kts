@@ -6,14 +6,11 @@ plugins {
 apply<LibrirySettingsGradle>()
 
 android{
-    namespace = "ru.sr.erudite.auth"
+    namespace = "ru.sr.erudite.storage"
 }
 
 dependencies{
-    connect(EruditeProjects.Navigation)
-    connect(EruditeProjects.Storage)
-
     compose()
-    navigation()
-
+    retroft()
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
 }
