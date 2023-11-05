@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="ui_kit_hint_Password">Пароль</string>
+    <string name="ui_kit_hint_email">email</string>
+    <string name="ui_kit_error_email">* Пустое поле, или не соответствует минимальным требованиям!</string>
+
+    <string name="ui_kit_password_helper_error">* Пустое поле, или не соответствует минимальным требованиям! </string>
+
+</resources>

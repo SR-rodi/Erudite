@@ -1,4 +1,4 @@
-package ru.sr.erudite
+package ru.sr.erudite.presentation
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -10,7 +10,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 import org.koin.androidx.compose.koinViewModel
 import ru.sr.erudite.data.api.AuthApi
-import ru.sr.erudite.presentation.NetworkResponse
 
 @Composable
 fun AuthScreen(viewModel: AuthScreenViewModel = koinViewModel()) {

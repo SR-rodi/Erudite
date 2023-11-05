@@ -22,3 +22,15 @@ fun EruditeTheme(
         )
     }
 }
+
+object EruditeTheme{
+    val colors: EruditeColor
+        @Composable
+        get() = LocalColorProvider.current
+    val shapes: EruditeShape
+        @Composable
+        get() = LocalShapeProvider.current
+    val fonts: EruditeFont
+        @Composable
+        get() = LocalFontProvider.current
+}

@@ -5,6 +5,10 @@ fun DependencyHandler.implementation(dependencies: Any) {
     add("implementation", dependencies)
 }
 
+fun DependencyHandler.debugImplementation(dependencies: Any) {
+    add("debugImplementation", dependencies)
+}
+
 fun DependencyHandler.connect(dependencies: EruditeProjects) {
     implementation(project(dependencies.name))
 }
@@ -14,8 +18,12 @@ fun DependencyHandler.compose() {
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.ui:ui-tooling-preview")
+
     implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    debugImplementation("androidx.compose.ui:ui-tooling")
+
+
 }
 
 fun DependencyHandler.core() {

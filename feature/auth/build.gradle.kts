@@ -12,6 +12,7 @@ android{
 dependencies{
     connect(EruditeProjects.Navigation)
     connect(EruditeProjects.Network)
+    connect(EruditeProjects.UiKit)
 
     compose()
     navigation()
