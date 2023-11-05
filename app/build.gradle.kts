@@ -51,10 +51,14 @@ android {
 dependencies {
     connect(EruditeProjects.UiKit)
     connect(EruditeProjects.Navigation)
+    connect(EruditeProjects.Network)
     connect(EruditeProjects.FeatureAuth)
 
 
     core()
     compose()
     navigation()
+    retroft()
+    okhttpLogging()
+    di()
 }

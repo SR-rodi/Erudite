@@ -32,3 +32,13 @@ fun DependencyHandler.retroft(){
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 }
 
+
+fun DependencyHandler.okhttpLogging(){
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
+}
+
+fun DependencyHandler.di(){
+    implementation ("io.insert-koin:koin-android:3.4.0")
+    implementation ("io.insert-koin:koin-androidx-compose:3.4.0")
+}
+

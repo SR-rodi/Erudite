@@ -1,9 +1,10 @@
-package ru.sr.erudite.data.network
+package ru.sr.erudite.data
 
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.CallAdapter
 import retrofit2.Converter
+import ru.sr.erudite.presentation.NetworkResponse
 import java.lang.reflect.Type
 
 internal class NetworkResponseAdapter<Success:Any, Error:Any>(

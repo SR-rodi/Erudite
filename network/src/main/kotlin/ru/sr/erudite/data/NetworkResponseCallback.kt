@@ -1,11 +1,11 @@
-package ru.sr.erudite.data.network
+package ru.sr.erudite.data
 
-import android.util.Log
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Converter
 import retrofit2.Response
+import ru.sr.erudite.presentation.NetworkResponse
 import java.io.IOException
 
 internal class NetworkResponseCallback<S:Any, E:Any>(
@@ -49,7 +49,6 @@ internal class NetworkResponseCallback<S:Any, E:Any>(
 
                 errorConverter.convert(error)
             } catch (e: Exception) {
-                Log.e("KArt","Adapter = $e")
                 null
             }
         }

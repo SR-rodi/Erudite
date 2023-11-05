@@ -1,4 +1,4 @@
-package ru.sr.erudite.data.network
+package ru.sr.erudite.data
 
 import okhttp3.Request
 import okhttp3.ResponseBody
@@ -7,6 +7,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Converter
 import retrofit2.Response
+import ru.sr.erudite.presentation.NetworkResponse
 
 internal class NetworkResponseCall<S:Any, E:Any>(
     private val delegate: Call<S>,

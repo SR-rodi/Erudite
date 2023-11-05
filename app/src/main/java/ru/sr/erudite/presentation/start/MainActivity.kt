@@ -1,4 +1,4 @@
-package ru.sr.erudite
+package ru.sr.erudite.presentation.start
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,7 +9,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import ru.sr.erudite.navigation.setNavGraph
+import ru.sr.erudite.DestinationsFlow
+import ru.sr.erudite.presentation.navigation.setNavGraph
 import ru.sr.erudite.theme.EruditeTheme
 
 class MainActivity : ComponentActivity() {

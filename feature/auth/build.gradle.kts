@@ -11,9 +11,10 @@ android{
 
 dependencies{
     connect(EruditeProjects.Navigation)
-    connect(EruditeProjects.Storage)
+    connect(EruditeProjects.Network)
 
     compose()
     navigation()
-
+    retroft()
+    di()
 }

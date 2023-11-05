@@ -1,4 +1,4 @@
-package ru.sr.erudite.navigation
+package ru.sr.erudite.presentation.navigation
 
 import ru.sr.erudite.Destinations
 

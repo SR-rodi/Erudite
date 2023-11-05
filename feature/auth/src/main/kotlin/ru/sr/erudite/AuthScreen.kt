@@ -1,34 +1,45 @@
 package ru.sr.erudite
 
-import android.util.Log
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import ru.sr.erudite.data.network.NetworkResponse
+import androidx.compose.runtime.collectAsState
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.launch
+import org.koin.androidx.compose.koinViewModel
+import ru.sr.erudite.data.api.AuthApi
+import ru.sr.erudite.presentation.NetworkResponse
 
 @Composable
-fun AuthScreen() {
+fun AuthScreen(viewModel: AuthScreenViewModel = koinViewModel()) {
 
-    var message by remember {
-        mutableStateOf("Loading")
+    val state = viewModel.state.collectAsState()
+
+    Text(text = state.value)
+
+}
+
+class AuthScreenViewModel(
+    private val api: AuthApi
+) : ViewModel() {
+    val state = MutableStateFlow("Loading")
+
+    init {
+        test()
     }
 
-    LaunchedEffect(key1 = Unit){
-        val test =  TestApi.api().test("10")
-        Log.d("Kart","$test")
-        message = when(test){
+    private fun test() {
+        viewModelScope.launch(Dispatchers.IO) {
 
-            is NetworkResponse.ApiError -> test.body.message
-            is NetworkResponse.NetworkError -> test.error?.message.toString()
-            is NetworkResponse.Success -> test.body.name
-            is NetworkResponse.UnknownError -> test.error?.localizedMessage.toString()
+            state.value = when (val a = api.test("10")) {
+                is NetworkResponse.ApiError -> a.body.message
+                is NetworkResponse.NetworkError -> a.error?.message.toString()
+                is NetworkResponse.Success -> a.body.name
+                is NetworkResponse.UnknownError -> a.error?.localizedMessage.toString()
+            }
         }
     }
-
-    Text(text = message)
 
 }

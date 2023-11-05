@@ -17,5 +17,5 @@ rootProject.name = "Erudite"
 include(":app")
 include(":uiKit")
 include(":navigation")
-include(":storage")
+include(":network")
 include(":feature:auth")
