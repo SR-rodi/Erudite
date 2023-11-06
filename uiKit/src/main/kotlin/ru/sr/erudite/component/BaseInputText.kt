@@ -30,7 +30,7 @@ import ru.sr.erudite.theme.EruditeTheme
 fun BaseInputText(
     modifier: Modifier = Modifier,
     value: String,
-    paddingValues: PaddingValues = PaddingValues(horizontal = 16.dp),
+    paddingValues: PaddingValues = PaddingValues(),
     isEnable: Boolean = true,
     isError: Boolean = false,
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default,

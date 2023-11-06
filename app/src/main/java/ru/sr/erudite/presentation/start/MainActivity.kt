@@ -23,7 +23,6 @@ class MainActivity : ComponentActivity() {
 
                 NavHost(
                     modifier = Modifier
-                        .background(Color.Cyan)
                         .fillMaxSize(),
                     navController = navController,
                     startDestination = DestinationsFlow.DestinationAuth.route,

@@ -1,5 +1,6 @@
 package ru.sr.erudite.component
 
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Face
@@ -24,6 +25,7 @@ fun PasswordInput(
     value: String,
     isError: Boolean = false,
     isEnable: Boolean = true,
+    padding: PaddingValues = PaddingValues(),
     onValueChange: (String) -> Unit,
 ) {
 
@@ -36,6 +38,7 @@ fun PasswordInput(
             keyboardType = KeyboardType.Password,
             imeAction = ImeAction.Done
         ),
+        paddingValues = padding,
         visualTransformation = if (isVisibilityPassword) VisualTransformation.None else PasswordVisualTransformation(),
         hint = stringResource(id = R.string.ui_kit_hint_Password),
         trailingIcon = Icons.Default.Face,

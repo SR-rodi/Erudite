@@ -1,5 +1,6 @@
 package ru.sr.erudite.component
 
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Clear
@@ -16,6 +17,7 @@ import ru.sr.erudite.uiKit.R
 fun EmailInput(
     modifier: Modifier = Modifier,
     value: String,
+    padding:PaddingValues = PaddingValues(),
     isError: Boolean = false,
     isEnable: Boolean = true,
     isVisibleTrailingIcon: Boolean = true,
@@ -28,6 +30,7 @@ fun EmailInput(
         value = value,
         isError = isError,
         isEnable = isEnable,
+        paddingValues = padding,
         hint = stringResource(id = R.string.ui_kit_hint_email),
         trailingIcon = if (isVisibleTrailingIcon) Icons.Filled.Clear else null,
         supportingText = stringResource(id = R.string.ui_kit_error_email),

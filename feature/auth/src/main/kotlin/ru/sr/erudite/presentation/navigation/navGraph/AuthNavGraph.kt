@@ -6,6 +6,7 @@ import androidx.navigation.navigation
 import ru.sr.erudite.presentation.AuthScreen
 import ru.sr.erudite.DestinationsFlow
 import ru.sr.erudite.presentation.navigation.AuthDestinations
+import ru.sr.erudite.presentation.signIn.SignInScreen
 import ru.sr.erudite.screen
 
 fun NavGraphBuilder.authNavGraph(navController: NavController) {
@@ -16,7 +17,7 @@ fun NavGraphBuilder.authNavGraph(navController: NavController) {
     ) {
 
         screen(AuthDestinations.SignIn) {
-            AuthScreen()
+            SignInScreen()
         }
     }
 }

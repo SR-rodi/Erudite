@@ -6,6 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.create
 import ru.sr.erudite.presentation.AuthScreenViewModel
 import ru.sr.erudite.data.api.AuthApi
+import ru.sr.erudite.presentation.signIn.SignInViewModel
 
 fun authModule() = listOf(auth())
 
@@ -13,4 +14,5 @@ private fun auth() = module {
     single<AuthApi> { get<Retrofit>().create() }
 
     viewModelOf(::AuthScreenViewModel)
+    viewModelOf(::SignInViewModel)
 }
