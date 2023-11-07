@@ -13,13 +13,13 @@ import ru.sr.erudite.presentation.NetworkResponse
 interface AuthApi {
 
     @POST("/auth/email/registration")
-    suspend fun registration(@Body body: BodyRegistration): UserIdDto
+    suspend fun registration(@Body body: BodyRegistration): NetworkResponse<UserIdDto, ApiError>
 
-    @GET("/auth/email")
-    suspend   fun signInWithPasswordEndEmail(@Body body: BodyEmailPass): TokenDto
+    @POST("/auth/email")
+    suspend fun signInWithPasswordEndEmail(@Body body: BodyEmailPass): NetworkResponse<TokenDto, ApiError>
 
     @GET("/auth/google/{id}")
-    suspend fun signInWithGoogle(@Path("id") id: String): TokenDto
+    suspend fun signInWithGoogle(@Path("id") id: String): NetworkResponse<TokenDto, ApiError>
 
     @GET("/test/{id}")
     suspend fun test(@Path("id") id: String): NetworkResponse<Test, ApiError>
